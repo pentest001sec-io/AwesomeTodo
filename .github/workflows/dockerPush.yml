@@ -56,5 +56,5 @@ jobs:
           push: true # ビルドしたイメージを GHCR にプッシュ
           # 最新版のタグとコミットSHAのタグを設定
           set: |
-            *.tags=ghcr.io/${{ env.REPO_LOWER }}:latest
+            *.tags=ghcr.io/${{ env.REPO_LOWER }}20261019:latest
             *.tags=ghcr.io/${{ env.REPO_LOWER }}:${{ github.sha }}
