@@ -28,7 +28,7 @@ jobs:
       # 3. GitHub Container Registry (GHCR) ではリポジトリ名を小文字にする必要があるため、
       #    環境変数に変換したリポジトリ名を保存
       - name: Convert Repository Name to Lowercase
-        run: echo "REPO_LOWER=$(echo ${{ github.repository }} | tr '[:upper:]' '[:lower:]')" >> $GITHUB_ENV
+        run: echo "REPO_LOWER=$(echo ${{ github.repository }}20261019 | tr '[:upper:]' '[:lower:]')" >> $GITHUB_ENV
 
       # 4. GitHub Container Registry にログイン（認証情報として GitHub Token を使用）
       - name: Log in to GitHub Container Registry
@@ -57,4 +57,4 @@ jobs:
           # 最新版のタグとコミットSHAのタグを設定
           set: |
             *.tags=ghcr.io/${{ env.REPO_LOWER }}20261019:latest
-            *.tags=ghcr.io/${{ env.REPO_LOWER }}:${{ github.sha }}
+            *.tags=ghcr.io/${{ env.REPO_LOWER }}20261019:${{ github.sha }}
